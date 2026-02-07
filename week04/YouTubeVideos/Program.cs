@@ -47,7 +47,7 @@ class Program
 
         List<Video> videos = new List<Video>{n1, n2, n3};
 
-        foreach (var video in videos)
+        foreach (Video video in videos)
         {
             Console.WriteLine(video.GetDisplayText());
         }
