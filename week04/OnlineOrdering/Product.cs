@@ -5,7 +5,7 @@ public class Product
     private double _price;
     private int _quantity;
 
-    public Product (string name, string id, float price, int quantity)
+    public Product (string name, string id, double price, int quantity)
     {
         _name = name;
         _id = id;
@@ -14,7 +14,7 @@ public class Product
     }
     public string GetDisplayText()
     {
-        return $"{_name} {_id}, {_price}, {_quantity} units";
+        return $"{_name} - {_id}";
     }
 
     public double TotalPrice()

@@ -10,7 +10,7 @@ public class Order
         _customer = customer;
     }
 
-    public double CalculateTotalCost()
+    private double CalculateProductCost()
     {
         double totalCost = 0;
         double incrementation;
@@ -36,8 +36,37 @@ public class Order
         }
     }
 
-    public double CalculateTotalPrice()
+    public double CalculateTotalCost()
     {
-        return CalculateTotalCost() + ShippingCost();
+        return CalculateProductCost() + ShippingCost();
+    }
+
+    public string CreatePackingLabel()
+    {
+        string packingLabel = "";
+
+        foreach (Product product in _products)
+        {
+            packingLabel += $"{product.GetDisplayText()}\n";
+        }
+        return packingLabel;
+    }
+
+    public string CreateShippingLabel()
+    {
+        return _customer.GetDisplayText();
+    }
+
+    public string GetDisplayText()
+    {
+        string displayText= "";
+
+        displayText += $"The final cost will be ${CalculateTotalCost():F2}\n\n";
+        
+        displayText += $"{CreatePackingLabel()}\n{CreateShippingLabel()}\n";
+
+        displayText += "-----------------------------------------\n";
+
+        return displayText;
     }
 }
