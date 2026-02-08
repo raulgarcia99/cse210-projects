@@ -6,7 +6,8 @@ class Program
     static void Main(string[] args)
     {
 
-        Video n1 = new Video (
+        Video n1 = new Video
+        (
             "Top 5 places you should visit in France",
             "Mary Johnson",
             600,
@@ -19,7 +20,8 @@ class Program
             }
         );
 
-        Video n2 = new Video (
+        Video n2 = new Video
+        (
             "How to make lemonade in 3 minutes",
             "Lucas Serrano",
             180,
@@ -32,7 +34,8 @@ class Program
             }
         );
 
-        Video n3 = new Video (
+        Video n3 = new Video
+        (
             "My life is beautiful",
             "Charlotte Morrison",
             160,
