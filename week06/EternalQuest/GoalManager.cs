@@ -81,8 +81,11 @@ public class GoalManager
                 bool completed = bool.Parse(data[3].Trim());
 
                 var goal = new SimpleGoal(name, description, points);
-                if (completed) goal.RecordEvent();
-                _goals.Add(goal);
+                if (completed)
+                {
+                    goal.RecordEvent();
+                    _goals.Add(goal);
+                }
             }
             else if (type == "Checklist goal")
             {
@@ -95,7 +98,9 @@ public class GoalManager
 
                 var goal = new ChecklistGoal(name, description, points, target, bonus);
                 for (int j = 0; j < timesCompleted; j++)
-                goal.RecordEvent();
+                {
+                    goal.RecordEvent();
+                }
                 _goals.Add(goal);
             }
             else if (type == "Eternal goal")
