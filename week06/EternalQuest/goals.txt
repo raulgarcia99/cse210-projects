@@ -1,0 +1,4 @@
+310
+Simple goal: Take out Trash, Take out trash at 8 00 am, 10, True
+Eternal goal:Read Scriptures, Read 1 chapter of the Book of Mormon everyday, 100
+Checklist goal:Buy notebooks, Buy 5 notebooks for school, 100, 2,5, 50
